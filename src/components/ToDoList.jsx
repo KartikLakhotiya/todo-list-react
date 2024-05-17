@@ -27,7 +27,7 @@ const ToDoList = () => {
 
     const handleDeleteTodo = (index) => {
         let reducedTodo = [...allTodos];
-        reducedTodo.splice(index, 1); // Fix to remove only one item at the specified index
+        reducedTodo.splice(index, 1);
         setTodos(reducedTodo);
         console.log(reducedTodo);
     };
@@ -56,7 +56,7 @@ const ToDoList = () => {
 
     const handleCompletedDeleteTodo = (index) => {
         let reducedTodo = [...completedTodos];
-        reducedTodo.splice(index, 1); // Fix to remove only one item at the specified index
+        reducedTodo.splice(index, 1); 
         setCompletedTodos(reducedTodo);
     };
 
