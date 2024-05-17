@@ -4,6 +4,12 @@
     font-family: 'Inter';
 }
 
+h1{
+    font-weight: 800;
+    font-size: 50px;
+    text-decoration: underline;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
   }
