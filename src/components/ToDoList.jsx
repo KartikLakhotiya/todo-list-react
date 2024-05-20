@@ -12,6 +12,17 @@ const ToDoList = () => {
     const [completedTodos, setCompletedTodos] = useState([]);
 
     const handleAddTodo = () => {
+
+        if (newTitle === ""){
+            alert("Please Fill Title.")
+            return
+        }
+
+        if (newDescription === ""){
+            alert("Please Fill Description.")
+            return
+        }
+
         let newTodoItem = {
             title: newTitle,
             description: newDescription
@@ -69,7 +80,7 @@ const ToDoList = () => {
     // }, []);
 
     return (
-        <div>
+        <div className='main'>
             <h1>To Do List</h1>
             <div className="todo-wrapper">
                 <div className="todo-input">
@@ -123,7 +134,7 @@ const ToDoList = () => {
 
                     {isCompleteScreen === 3 && (
                         <>
-                            <h2>To Do</h2>
+                            <h2>Pending</h2>
                             {allTodos.map((item, index) => (
                                 <div className='todo-list-item' key={`todo-${index}`}>
                                     <h3>{item.title}</h3>
